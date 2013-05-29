@@ -1,0 +1,11 @@
+# Given the name of a directory:
+# 1. list the (normal) files in there
+# 2. For each sub-directory:
+#   1. list the (normal) files
+#   2. for each sub-directory:
+#   ...
+#
+#USAGE: ruby list_directory.rb /home/tom/code
+
+puts "Listing #{ARGV.first}"
+puts Dir[ARGV.first + "/*"]
