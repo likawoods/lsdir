@@ -23,3 +23,5 @@ puts Dir[ARGV.first + "/*"]
 
 # true if filename is a directory, false if not
 File.directory?(filename)
+
+#if it is, we need to do what we just did again, but with a different value for ARGV.first
