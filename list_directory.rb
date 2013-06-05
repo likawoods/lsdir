@@ -25,3 +25,16 @@ puts Dir[ARGV.first + "/*"]
 File.directory?(filename)
 
 #if it is, we need to do what we just did again, but with a different value for ARGV.first
+
+puts "Listing #{ARGV.first}"  
+
+def list_files(name)
+  Dir[name + "/*"].each do |filename|  # gives a list of the directory; /* gives everything that is in the directory
+	puts filename
+    if File.directory?(filename) 
+  	   list_files(filename)
+    end
+  end
+end
+list_files(ARGV.first)
+
